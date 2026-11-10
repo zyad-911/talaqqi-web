@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#f6f4ef" />
+    <meta name="description" content="Learn Quran recitation from your sheikh: melody, micro-pitch, timing, breath and pronunciation." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <link rel="preload" href="/fonts/InstrumentSans.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/InstrumentSerif.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/AmiriQuran.woff2" as="font" type="font/woff2" crossorigin />
+    <title>Talaqqi</title>
+    <script>
+      // apply the saved theme and language before first paint
+      (function () {
+        var s = {};
+        try { s = JSON.parse(localStorage.getItem('talaqqi.settings') || '{}').state || {}; } catch (e) {}
+        var t = s.theme || 'auto';
+        if (t === 'auto') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = t;
+        document.querySelector('meta[name=theme-color]').content = t === 'dark' ? '#0f1211' : '#f6f4ef';
+        var l = s.language || 'auto';
+        if (l === 'auto') l = /^ar/i.test((navigator.languages && navigator.languages[0]) || navigator.language || '') ? 'ar' : 'en';
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-CUhuArC8.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/controls-CFdkeiWa.js">
+    <link rel="modulepreload" crossorigin href="/assets/dist-CMedSjkm.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-BLdHbfdN.js">
+    <link rel="stylesheet" crossorigin href="/assets/controls-CF30Lbxu.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-DgBXnJ66.css">
+  <link rel="manifest" href="/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

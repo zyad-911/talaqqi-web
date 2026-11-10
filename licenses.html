@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Licenses · Talaqqi</title>
+  <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root { --bg: #f6f4ef; --ink: #1a1c1b; --ink2: #565a57; --line: #e6e1d6; --sunken: #efece5; --accent: #1d6b55; color-scheme: light dark; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0f1211; --ink: #eceee9; --ink2: #a4aaa5; --line: #242a27; --sunken: #0b0d0c; --accent: #6dc3a0; } }
+    @font-face { font-family: 'Instrument Serif'; src: url('/fonts/InstrumentSerif.woff2') format('woff2'); }
+    @font-face { font-family: 'Instrument Sans'; src: url('/fonts/InstrumentSans.woff2') format('woff2'); font-weight: 400 700; }
+    @font-face { font-family: 'IBM Plex Sans Arabic'; src: url('/fonts/IBMPlexSansArabic-400.woff2') format('woff2'); }
+    @font-face { font-family: 'Amiri'; src: url('/fonts/Amiri.woff2') format('woff2'); }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 'Instrument Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: calc(env(safe-area-inset-top) + 24px) 22px 64px; }
+    nav { font-size: 14px; }
+    a { color: var(--accent); }
+    h1 { font: 400 40px/1.15 'Instrument Serif', 'Amiri', Georgia, serif; margin: 28px 0 4px; }
+    p { color: var(--ink2); }
+    .ar { direction: rtl; font-size: 17px; line-height: 1.85; }
+    pre { white-space: pre-wrap; word-break: break-word; font: 12.5px/1.55 ui-monospace, 'Cascadia Mono', Menlo, Consolas, monospace; background: var(--sunken); border-radius: 14px; padding: 18px; color: var(--ink2); }
+  </style>
+</head>
+<body>
+<main>
+  <nav><a href="/" onclick="if (history.length > 1) { history.back(); return false; }">← Talaqqi</a></nav>
+  <h1>Licenses</h1>
+  <p>Talaqqi by Zedline Studio · © 2026 Zyad Kamal Hussein Abdelaal. All rights reserved. The app is proprietary software and may not be copied or redistributed without permission.
+    It is built with the open-source fonts, libraries and speech model listed below, each used under its own license.</p>
+  <p class="ar" lang="ar">تلقّي © 2026 <bdi>Zyad Kamal Hussein Abdelaal</bdi>. جميع الحقوق محفوظة. التطبيق برنامج مملوك لا يجوز نسخه أو إعادة توزيعه دون إذن.
+    وقد بُني باستخدام الخطوط والمكتبات ونموذج التعرّف على الكلام مفتوحة المصدر المذكورة أدناه، ولكلٍّ منها ترخيصه الخاص.</p>
+  <pre id="text">…</pre>
+</main>
+<script>
+  fetch('/third-party-licenses.txt').then(r => r.text()).then(t => { document.getElementById('text').textContent = t; })
+    .catch(() => { document.getElementById('text').textContent = 'third-party-licenses.txt could not be loaded.'; });
+</script>
+</body>
+</html>

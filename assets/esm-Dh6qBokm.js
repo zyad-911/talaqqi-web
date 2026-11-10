@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/web-DJNEyXsv.js","assets/dist-CMedSjkm.js"])))=>i.map(i=>d[i]);
+import{r as e}from"./dist-CMedSjkm.js";import{t}from"./preload-helper-BLdHbfdN.js";var n=e(`KeepAwake`,{web:()=>t(()=>import(`./web-DJNEyXsv.js`).then(e=>new e.KeepAwakeWeb),__vite__mapDeps([0,1]))});export{n as KeepAwake};
